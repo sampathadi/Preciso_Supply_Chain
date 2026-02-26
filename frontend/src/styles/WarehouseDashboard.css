@@ -1,0 +1,7 @@
+.warehouse-page { padding: 18px; }
+.warehouse-grid-layout { display: grid; grid-template-columns: 420px 1fr; gap: 18px; align-items: start; }
+.panel { padding: 12px; }
+.box-type-row { display:flex; gap:8px; align-items:center; margin:6px 0; }
+.box-type-row input[type="number"] { width:72px; }
+.box-type-row input[type="color"] { width:40px; height:28px; padding:0; }
+.access-denied { padding: 20px; color: #7f1d1d; }

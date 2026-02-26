@@ -1,0 +1,58 @@
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --muted: #687182;
+  --accent: #4f46e5;
+  --accent-2: #06b6d4;
+  --success: #10b981;
+  --danger: #ef4444;
+  --glass: rgba(255,255,255,0.6);
+}
+
+.dashboard-root{
+  padding: 28px 24px;
+  background: var(--bg);
+  min-height: calc(100vh - 64px);
+}
+
+.dashboard-header h1{ margin: 0; font-size: 22px; color: #0f172a }
+.dashboard-header .muted{ color: var(--muted); margin-top:6px }
+
+.kpi-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.kpi-card{
+  background: linear-gradient(180deg, var(--card), #fbfdff);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 10px rgba(15,23,42,0.04);
+}
+.kpi-value{ font-size: 20px; font-weight:700; color: #0f172a }
+.kpi-label{ color: var(--muted); margin-top:6px }
+
+.panels{ display:flex; gap:16px; margin-top:20px; align-items:flex-start }
+.panel{ flex:1; background:var(--card); padding:16px; border-radius:10px; box-shadow: 0 6px 18px rgba(15,23,42,0.04) }
+.panel h3{ margin:0 0 12px 0 }
+
+.bars{ display:flex; flex-direction:column; gap:12px }
+.bar{ display:flex; flex-direction:column }
+.bar-label{ font-size:13px; color:var(--muted); margin-bottom:6px }
+.bar-track{ background: #eef2ff; border-radius:6px; height:12px; overflow:hidden }
+.bar-fill{ height:100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius:6px }
+
+.orders-table{ width:100%; border-collapse: collapse; font-size:14px }
+.orders-table th, .orders-table td{ text-align:left; padding:10px 8px; border-bottom:1px solid #f1f5f9 }
+.orders-table thead th{ color:var(--muted); font-weight:600; font-size:13px }
+.status{ padding:6px 10px; border-radius:999px; font-size:12px; color: #fff }
+.status.pending{ background: #f59e0b }
+.status.confirmed{ background: var(--accent) }
+.status.received{ background: var(--success) }
+
+@media(max-width:900px){
+  .kpi-grid{ grid-template-columns: repeat(2,1fr) }
+  .panels{ flex-direction:column }
+}

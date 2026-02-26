@@ -1,0 +1,31 @@
+/* Page Container */
+.page-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 36px;
+  color: var(--text);
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.page-header p {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width:800px) { .page-header h1 { font-size:28px; } }
+
+/* The rest of the page-level styles can remain as-is and will inherit theme variables. */

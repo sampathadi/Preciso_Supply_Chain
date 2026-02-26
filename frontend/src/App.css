@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+}
+
+/* Global layout and container rules */
+:root {
+  --content-max: 1100px;
+  --bg: #f6f8fb;
+}
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: #0f172a;
+}
+
+.app-root { display: flex; min-height: 100vh; }
+.main-shell { margin-left:260px; flex:1; display:flex; flex-direction:column; min-height:100vh; }
+.app-content { flex: 1 0 auto; padding: 28px 36px; max-width: calc(var(--content-max) + 200px); margin: 0 auto; width: 100%; }
+.app-footer { text-align:center; padding:18px 12px; color:#666; font-size:13px; background:transparent; }
+
+/* Topbar spacing (Navbar) */
+.site-header{position:sticky;top:0;z-index:30}
+
+
+.container { max-width: var(--content-max); margin: 0 auto; padding: 0 16px; }
+.card { background: white; border-radius: 12px; padding: 18px; box-shadow: 0 8px 24px rgba(2,6,23,0.06); }
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
